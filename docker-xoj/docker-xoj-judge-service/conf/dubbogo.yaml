@@ -1,0 +1,13 @@
+dubbo:
+  registries:
+    nacos:
+      protocol: nacos
+      address: 60.204.157.168:8848
+  consumer:
+    references:
+      QuestionClientImpl:
+        protocol: tri
+        interface: "" # 设置为对应的接口名称
+      QuestionSubmitClientImpl:
+        protocol: tri
+        interface: ""

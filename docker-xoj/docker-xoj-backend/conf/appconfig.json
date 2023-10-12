@@ -1,0 +1,12 @@
+{
+  "database": {
+    "savePath": "xojuser:xoj123456@tcp(xoj-mysql)/xoj?charset=utf8&parseTime=true",
+    "maxOpenConns": 10
+  },
+  "redis": {
+    "addr": "xoj-redis",
+    "userName": "",
+    "passWord": "",
+    "db": 0
+  }
+}

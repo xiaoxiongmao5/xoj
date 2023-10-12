@@ -1,0 +1,8 @@
+{
+  "redis": {
+    "addr": "xoj-redis",
+    "userName": "",
+    "passWord": "",
+    "db": 0
+  }
+}
