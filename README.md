@@ -22,6 +22,16 @@
 3. 代码沙箱 [xoj-code-sandbox: 8093](https://github.com/xiaoxiongmao5/xoj-code-sandbox) : 负责编译执行代码的
 4. 前端服务 [xoj-frontend: 8088](https://github.com/xiaoxiongmao5/xoj-frontend) : 负责提供用户操作界面
 
+## 项目展示
+
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/b341ec1e-e777-49ac-8704-992c01192cb2)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/f852df76-eb4f-40ac-bea6-89c7fcff2606)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/e574e28a-405f-4c9c-8e72-a9e9f604e7a0)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/58ec6240-33c9-4904-8c3a-22aee9e0621c)
+
+
+
+
 ## 做题流程的时序图
 
 ![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/d2207197-325a-4ddf-b88d-e4454d5eece1)
