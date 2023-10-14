@@ -4,7 +4,7 @@
     "maxOpenConns": 10
   },
   "redis": {
-    "addr": "xoj-redis",
+    "addr": "xoj-redis:6379",
     "userName": "",
     "passWord": "",
     "db": 0

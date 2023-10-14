@@ -2,7 +2,7 @@ dubbo:
   registries:
     nacos:
       protocol: nacos
-      address: 60.204.157.168:8848
+      address: 192.168.2.104:8848
   protocols:
     triple:
       name: tri

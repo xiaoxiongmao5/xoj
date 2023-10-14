@@ -1,9 +1,5 @@
 version: '3'
 
-networks:
-  nacos_xj_network:
-    external: true   # 声明这是一个外部网络
-
 services:
   xoj-frontend:
     image: xiaoxiongmao5/xoj-frontend:1.0.0
@@ -12,8 +8,6 @@ services:
       - "8088:8088"
     restart: always
     tty: true
-    networks:
-      - nacos_xj_network
 
   xoj-backend:
     image: xiaoxiongmao5/xoj-backend:1.0.0
@@ -35,8 +29,6 @@ services:
       - NACOS_HOST=nacos  # 使用容器名称
       - NACOS_PORT=8848
     restart: always
-    networks:
-      - nacos_xj_network
 
   xoj-judge-service:
     image: xiaoxiongmao5/xoj-judge-service:1.0.0
@@ -44,7 +36,6 @@ services:
     ports:
       - "8092:8092"
     depends_on:
-      - xoj-code-sandbox
       - xoj-backend
     volumes:
       - ./docker-xoj-judge-service/conf:/app/conf
@@ -56,21 +47,7 @@ services:
       - NACOS_HOST=nacos  # 使用容器名称 或者 Nacos容器的IP地址
       - NACOS_PORT=8848
     restart: always
-    networks:
-      - nacos_xj_network
     
-  xoj-code-sandbox:
-    image: xiaoxiongmao5/xoj-code-sandbox:1.0.0
-    container_name: xoj-code-sandbox
-    ports:
-      - "8093:8093"
-    volumes:
-      - ./docker-xoj-code-sandbox/conf:/app/conf
-      - ./docker-xoj-code-sandbox/log:/app/log
-    restart: always
-    networks:
-      - nacos_xj_network
-
   xoj-mysql:
     image: mysql:8.0
     container_name: xoj-mysql
@@ -86,8 +63,6 @@ services:
       - ./docker-mysql8.0/mysql-data:/var/lib/mysql # 将MySQL数据持久化到宿主机的目录
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql # 这是 MySQL 容器初始化时会自动运行的 SQL 初始化脚本目录。
     restart: always
-    networks:
-      - nacos_xj_network
   
   xoj-redis:
     image: redis:6.0.8
@@ -100,5 +75,3 @@ services:
       - ./docker-redis6.0.8/data:/data
     restart: always
     command: redis-server /etc/redis/redis.conf
-    networks:
-      - nacos_xj_network

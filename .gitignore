@@ -1,0 +1,5 @@
+docker-xoj/docker-mysql8.0/*
+docker-xoj/docker-redis6.0.8/*
+docker-xoj/docker-xoj-code-sandbox/log/*
+docker-xoj/docker-xoj-judge-service/log/*
+docker-xoj/docker-xoj-backend/log/*

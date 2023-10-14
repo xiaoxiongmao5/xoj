@@ -1,0 +1,18 @@
+version: '2'
+services:
+  nacos:
+    image: nacos/nacos-server:v2.1.2-slim                        # 镜像`nacos/nacos-server:v2.1.2-slim`
+    container_name: nacos                                        # 容器名为'nacos'
+    restart: always                                              # 指定容器退出后的重启策略为始终重启
+    volumes:                                                     # 数据卷挂载路径设置,将本机目录映射到容器目录
+      - ./data/nacos/logs:/home/nacos/logs
+    environment:
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+      MODE: standalone # 单机模式启动
+    ports:                              # 映射端口
+      - "8848:8848"
+    cpu_shares: 4
+    mem_limit: 2048M
+    networks:
+      - xj_network  # 将Nacos容器连接到自定义网络
