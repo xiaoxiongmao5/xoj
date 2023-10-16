@@ -2,7 +2,7 @@ version: '3'
 
 services:
   xoj-frontend:
-    image: xiaoxiongmao5/xoj-frontend:1.0.0
+    image: xiaoxiongmao5/xoj-frontend:1.0.1
     container_name: xoj-frontend
     ports:
       - "8088:8088"
@@ -10,7 +10,7 @@ services:
     tty: true
 
   xoj-backend:
-    image: xiaoxiongmao5/xoj-backend:1.0.0
+    image: xiaoxiongmao5/xoj-backend:1.0.1
     container_name: xoj-backend
     ports:
       - "8091:8091"
@@ -31,7 +31,7 @@ services:
     restart: always
 
   xoj-judge-service:
-    image: xiaoxiongmao5/xoj-judge-service:1.0.0
+    image: xiaoxiongmao5/xoj-judge-service:1.0.1
     container_name: xoj-judge-service
     ports:
       - "8092:8092"
