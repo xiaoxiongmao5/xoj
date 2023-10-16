@@ -119,6 +119,7 @@
 5. JudgeInfo结构体添加 Detail 字段，用于存储题目编译或运行时的具体报错信息
 6. 添加使用交叉编译方式，解决在 Mac 下编译出 Linux 的 golang 执行文件
 7. 题目表结构添加 AnswerTemplate 题目答案模版字段
+8. 构建容器化部署方案，使用Docker、Docker Compose实现一键部署，提升应用部署效率
 
 ## 项目过程中的文章产出 📚
 
