@@ -24,12 +24,23 @@
 
 ## 项目展示
 
-![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/b341ec1e-e777-49ac-8704-992c01192cb2)
-![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/f852df76-eb4f-40ac-bea6-89c7fcff2606)
-![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/e574e28a-405f-4c9c-8e72-a9e9f604e7a0)
-![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/58ec6240-33c9-4904-8c3a-22aee9e0621c)
+### 题库 && 做题界面
 
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/82819371-d332-4b10-aafc-eb795fe11242)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/41de23b4-b020-4a40-b3aa-cf8f043ff36c)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/5e52cc12-d585-4862-bc2e-ee098a8df6b0)
 
+### 浏览题目提交 && 提交代码详情界面
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/11db8d5a-3a04-4f00-819d-38e662546b3a)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/1278a4e0-4c67-4634-a4f4-1df74d9ddc15)
+
+### 题目管理界面
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/ee6819fc-7641-4ba5-94a4-4f6a1ffebb34)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/1b43e902-2ed3-4fe0-b28c-1f5789878635)
+
+### 用户管理界面
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/b9d8ad60-e3fb-4d3f-b07b-199ddfab5880)
+![image](https://github.com/xiaoxiongmao5/xoj/assets/25204083/b29f4a59-0d7e-47fc-b239-88ca4afeb0eb)
 
 
 ## 做题流程的时序图
