@@ -120,10 +120,6 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'xiaoxiong','$2a$10$WGmH.au4HIeiNxGvd9qkielhdKNAcBU/zHaZ4W1.ebuLqqZkUJBSO','','','小熊','','',0,'user','2023-09-25 21:25:08','2023-09-30 06:19:27',1),(2,'xiaoxiong2','$2a$10$9r.symlJ4GL6PZO0FbRQjOwp6N3zlnDUIJWfrKdVQJ2s2/QTQ3/0q','','','xiaoxiong2','','',0,'user','2023-09-26 10:42:26','2023-09-30 06:19:30',1),(3,'xiaoxiong3','$2a$10$SC7cd5qOehaglVub/m5N4OQmykAzf.ZJJTyN5ZX.mHyT4jZr0.Bd6','','','xiaoxiong3','','',0,'user','2023-09-26 11:55:34','2023-09-29 11:53:24',1),(4,'ding1','$2a$10$NpkQP9i/IJoHXut6pQqOIOkFHDOhWnPz1mRpJP03.jl6ht0cQPdvu','','','ding1','','',0,'user','2023-09-29 10:13:47','2023-09-30 06:19:46',1),(5,'ding2','$2a$10$oIP0NO1BBkC/FUr6zBk6ye5YhyLD1qNIM.OkrzM7EGcpcie4fq7ii','','','ding2','','',0,'user','2023-09-29 10:15:59','2023-09-30 06:19:49',1),(6,'ding3','$2a$10$w8fDwSDGGjyERkRSwFQy4O12Xx4f0kDUpK6RUowD7fDHTvbUbBiEm','','','小熊猫6ding3','aaa','bbb',0,'user','2023-09-29 10:17:30','2023-10-10 09:22:34',0),(7,'','','','','小熊猫777','111','222',1,'admin','2023-09-29 12:09:18','2023-09-29 12:32:16',1),(11,'ding4','','','','小熊猫777','','',0,'user','2023-09-29 12:39:14','2023-09-29 12:40:02',1),(12,'xiong1','$2a$10$HvlkcSa0Dfz8qlU1HEPQ2u89z2Xt5STqOz16Tmvpodsu24RJwMAYG','','','小熊猫12','12','12',0,'admin','2023-09-30 06:20:18','2023-09-30 06:21:29',0);
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-
 --
 -- Dumping routines for database 'xoj'
 --
