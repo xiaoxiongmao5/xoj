@@ -83,6 +83,24 @@
   
     可以去 nacos 注册中心看一下，访问 http://部署服务器的IP地址:8848/nacos/index.html
     默认用户名和密码都是 nacos
+
+    补充：若报错 `! nacos Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.`
+    原因：这个错误与Linux系统的swap分区配额限制有关。Nacos是一个服务发现和配置管理平台，它依赖于Linux的cgroup功能来管理资源和限制。
+    解决：
+    ```bash
+    # 编辑 GRUB 配置文件
+    sudo vim /etc/default/grub
+
+    # 在 GRUB_CMDLINE_LINUX_DEFAULT 行中添加 cgroup_enable=memory swapaccount=1
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash cgroup_enable=memory swapaccount=1"
+
+    # 保存并退出编辑器
+    # 更新 GRUB 配置
+    sudo update-grub
+
+    # 重启系统
+    sudo reboot
+    ```
 4. 部署本项目
    1. 克隆该项目到本地
        ```bash
