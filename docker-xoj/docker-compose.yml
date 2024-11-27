@@ -1,0 +1,69 @@
+version: '3'
+
+services:
+  xoj-backend:
+    image: xiaoxiongmao5/xoj-backend:1.0.1
+    container_name: xoj-backend
+    ports:
+      - "8091:8091"
+    depends_on:
+      - xoj-mysql
+      - xoj-redis
+    volumes:
+      - ./docker-xoj-backend/conf:/app/conf
+      - ./docker-xoj-backend/log:/app/log
+    environment:
+      - DB_HOST=host.docker.internal  # 本地MySQL主机
+      - DB_PORT=3306      # 设置后端项目连接的MySQL端口
+      - DB_USER=xojuser      # 设置后端项目连接的MySQL用户名
+      - DB_PASSWORD=xojpwd  # 设置后端项目连接的MySQL密码
+      - DB_NAME=xoj      # 设置后端项目连接的MySQL数据库名称
+      - NACOS_HOST=nacos  # 使用容器名称
+      - NACOS_PORT=8848
+    restart: always
+
+  xoj-judge-service:
+    image: xiaoxiongmao5/xoj-judge-service:1.0.1
+    container_name: xoj-judge-service
+    ports:
+      - "8092:8092"
+    depends_on:
+      - xoj-backend
+    volumes:
+      - ./docker-xoj-judge-service/conf:/app/conf
+      - ./docker-xoj-judge-service/log:/app/log
+    extra_hosts:
+      # - "xoj-code-sandbox.com:192.168.2.104" #local
+      - "xoj-code-sandbox.com:172.19.17.153"  #linux
+    environment:
+      - NACOS_HOST=nacos  # 使用容器名称 或者 Nacos容器的IP地址
+      - NACOS_PORT=8848
+    restart: always
+
+  xoj-mysql:
+    image: mysql:8.0
+    container_name: xoj-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456 # 设置MySQL的root密码
+      - MYSQL_ALLOW_EMPTY_PASSWORD=no
+      - MYSQL_DATABASE=xoj # 创建一个MySQL数据库，并设置其名称
+      - MYSQL_USER=xojuser
+      - MYSQL_PASSWORD=xoj123456
+    ports:
+      - "3307:3307"
+    volumes:
+      - ./docker-mysql8.0/mysql-data:/var/lib/mysql # 将MySQL数据持久化到宿主机的目录
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # 这是 MySQL 容器初始化时会自动运行的 SQL 初始化脚本目录。
+    restart: always
+
+  xoj-redis:
+    image: redis:6.0.8
+    container_name: xoj-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./docker-redis6.0.8/redis.conf:/etc/redis/redis.conf
+      - ./docker-redis6.0.8/log:/usr/local/redis/var
+      - ./docker-redis6.0.8/data:/data
+    restart: always
+    command: redis-server /etc/redis/redis.conf
